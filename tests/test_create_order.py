@@ -15,7 +15,7 @@ class TestCreateOrder:
         if len(color_order) > 0:
             payload['color'] = color_order
         payload_test = json.dumps(payload)
-        response = requests.post(f'{Url.BASE_URL}{Url.CREATE_ORDER}', data = payload_test)
-        print(response.json())
+        with allure.step('Создание заказа'):
+            response = requests.post(f'{Url.BASE_URL}{Url.CREATE_ORDER}', data = payload_test)
         assert response.status_code == 201
         assert Response.RESPONSE_CREATE_ORDER in response.json()

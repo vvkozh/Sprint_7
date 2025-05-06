@@ -13,6 +13,7 @@ def create_courier():
     response = requests.post(f'{Url.BASE_URL}{Url.LOGIN_URL}', data=payload_login)
     id_courier = response.json()['id']
     yield {
+        'payload': payload,
         'data_login': payload_login,
         'id': id_courier
     }

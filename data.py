@@ -7,11 +7,11 @@ class Response:
     RESPONSE_DELETE_WITHOUT_ID = {'code': 400 ,'message': 'Недостаточно данных для удаления курьера.'}
     RESPONSE_DELETE_INVALID_ID = {'code': 404 ,'message': 'Курьера с таким id нет.'}
     RESPONSE_NOT_ID = {'code': 400 ,'message': 'Недостаточно данных для поиска'}
-    RESPONSE_INVALID_ID = [
-        {'code': 404 ,'message': 'Заказа с таким id не существует'},
-        {'code': 404 ,'message': 'Курьера с таким id не существует'}
-    ]
+    RESPONSE_INVALID_ID_COURIER = {'code': 404 ,'message': 'Курьера с таким id не существует'}
+    RESPONSE_INVALID_ID_ORDER = {'code': 404 ,'message': 'Заказа с таким id не существует'}
     RESPONSE_WITHOUT_TRACK = {'code': 400 ,'message': 'Недостаточно данных для поиска'}
     RESPONSE_INVALID_TRACK = {'code': 404, 'message': 'Заказ не найден'}
     RESPONSE_DUPLICATE_LOGIN = {'code': 409, 'message': 'Этот логин уже используется. Попробуйте другой.'}
     RESPONSE_FAILED_CREATE_COURIER = {'code': 400, 'message': 'Недостаточно данных для создания учетной записи'}
+    RESPONSE_LOGIN_WITHOUT_LOGIN = {'code': 400, 'message': 'Недостаточно данных для входа'}
+    RESPONSE_LOGIN_WITH_INVALID_DATA = {'code': 404, 'message': 'Учетная запись не найдена'}
